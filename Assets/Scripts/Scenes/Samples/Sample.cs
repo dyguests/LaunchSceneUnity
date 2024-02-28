@@ -1,18 +1,21 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class Sample : MonoBehaviour
+namespace Scenes.Samples
 {
-    // Start is called before the first frame update
-    void Start()
+    public class Sample : MonoBehaviour
     {
-        
-    }
+        [SerializeField] private Button jumpBtn;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        private void Start()
+        {
+            jumpBtn.onClick.AddListener(() =>
+            {
+                Debug.Log("Sample Start jumpBtn onClick");
+#if UNITY_ANDROID
+                Launcher.LaunchBActivity();
+#endif
+            });
+        }
     }
 }
