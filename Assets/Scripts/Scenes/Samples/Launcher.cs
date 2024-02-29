@@ -15,8 +15,8 @@ namespace Scenes.Samples
 
         public static void LaunchBActivity()
         {
-            Debug.Log("Launcher LaunchBActivity");
-            LauncherJava.Call("launchB", UnityPlayerAndroid.CurrentActivity);
+            Debug.Log($"Launcher LaunchBActivity LauncherJava:{LauncherJava}");
+            LauncherJava.CallStatic("launchB", UnityPlayerAndroid.CurrentActivity);
         }
     }
 }
