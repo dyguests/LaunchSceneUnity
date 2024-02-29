@@ -1,9 +1,9 @@
 package com.fanhl.launchsceneandroid.sdk
 
-import androidx.appcompat.app.AppCompatActivity
+import android.app.Activity
 import android.os.Bundle
 
-class BActivity : AppCompatActivity() {
+class BActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_b)
